@@ -1,13 +1,141 @@
+* {
+  box-sizing: border-box;
+}
 body {
+  font-size: 16px;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #63ad8c;
+}
+/* #editor-container {
+  
+} */
+.editor-container-horizontal{
+  width: 80%;
+  height: 25vh;
+  min-width: 300px;
+  border: 1px solid grey;
+  margin: 2rem auto 0.25rem;
+  box-shadow: 0 0 10px navy;
+}
+/* #preview-container {
+} */
+.preview-container-horizontal{
+  width: 90%;
+  min-width: 300px;
+  border: 1px solid grey;
+  margin: 1.5rem auto 0.75rem;
+  box-shadow: 0 0 10px navy;
+}
+.appContainer-vertical{
+  display:flex;
+  flex-direction: row;
+  height:83vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.editor-container-vertical{
+  width: 40%;
+  height:100%;
+  min-width: 200px;
+  border: 1px solid grey;
+  margin: 1.75rem auto .75rem 2.75rem;
+  box-shadow: 0 0 10px navy;
+}
+.preview-container-vertical{
+  width: 50%;
+  height:100%;
+  min-width: 300px;
+  border: 1px solid grey;
+  margin: 1.75rem 2.75rem .75rem auto;
+  box-shadow: 0 0 10px navy;
+}
+
+.header {
+  width: 100%;
+  height: 2rem;
+  background-color: #1d8348;
+  padding: 0;
+}
+.header h3 {
+  margin: 0;
+  padding: 0.35rem 0.75rem;
+  background-color: #1d8348;
+  font-family: "Marker Felt";
+}
+#editor-text-container{
+  height:calc(100% - 2rem);
+  background-color: #c4e0d4;
+}
+#preview-text-container{
+  height:calc(100% - 2rem);
+  overflow: scroll;
+  background-color: #c4e0d4;
+}
+#editor {
+  box-sizing:border-box;
+  width: 100%;
+  height:100%;
+  padding: 0.35rem;
+  background-color: #c4e0d4;
+  resize: none;
+}
+#preview {
+  box-sizing:border-box;
+  width: 100%;
+  height:100%;
+  padding: 0.35rem;
+  background-color: #c4e0d4;
+  min-height: 200px;
+}
+#dev-info {
+  font-family: "Marker Felt";
+  width: 100%;
+  min-width: 15rem;
+  text-align: center;
+  color: white;
+}
+.dev-info-horizontal{
+  margin-bottom:.75rem;
+}
+.dev-info-vertical{
+  position: absolute;
+  bottom: .75rem;
+}
+#dev-info p {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  font-weight: 100;
+}
+#line {
+  width: 75%;
+  margin: .15rem auto;
+  border-bottom: 1px solid white;
+}
+#icons {
+  margin-top: 0;
+  padding: 0;
+}
+.icon-anchor {
+  padding: 0;
+  margin-left: 0.85rem;
+  font-size: 1.45rem;
+  color: white;
+}
+.icon-anchor:hover {
+  color: grey;
+  transform: scale(1.5);
+  transition: transform 0.5s ease-in-out;
+}
+
+#options{
+  position:fixed;
+  top:.15rem;
+  right:.15rem;
+  display:flex;
+  flex-direction:column;
+}
+
+#options .layoutButton{
+  background-color:#c4e0d4;
+  font-size:1.25rem;
 }
